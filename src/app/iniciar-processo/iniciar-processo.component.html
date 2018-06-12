@@ -1,0 +1,49 @@
+<div class="body-contet">
+    <mat-card class="example-card">
+
+        <mat-card-header>
+
+            <div class="div-total-size">
+                <h3 class="div-float-left">Iniciar processo</h3>
+                <mat-form-field class="div-float-right">
+                    <input matInput placeholder="Busca por nome de processo" [(ngModel)]="filtro">
+                </mat-form-field>
+            </div>
+
+        </mat-card-header>
+
+        
+        <div>
+            <mat-icon class="icon-info" aria-label="Clique no processo para iniciar" >info</mat-icon>
+            <label class="info-label-style" aria-flowto="button" > Clique no processo para iniciar</label>
+        </div>
+        
+        <br> <br>
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+            <!-- <mat-list role="list" *ngFor="let processo of onFilterGetList()">
+                <mat-list-item role="listitem">
+                    <button mat-button>{{processo}}</button>
+                </mat-list-item>
+            </mat-list> -->
+
+            <mat-nav-list role="list" *ngFor="let processo of onFilterGetList()" >
+                
+                <a mat-list-item>
+                        <span mat-line>{{processo}}</span>
+                </a>
+
+                <mat-divider></mat-divider>
+
+            </mat-nav-list>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button>Voltar</button>
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>

@@ -1,0 +1,163 @@
+<div id="tudo">
+        <div id="tudo1" class="filter-border">
+                <div>
+                        <button mat-button (click)="onClick">
+                                Criar um Filtro
+                                <mat-icon class="mat-10">add</mat-icon>
+                        </button>
+                        
+                        <button mat-button class="button-slider">
+                                <mat-icon>keyboard_arrow_left</mat-icon>
+                        </button>
+
+                        <mat-divider></mat-divider>
+                </div>
+                <div>
+
+                        <mat-nav-list role="list" *ngFor="let tarefa of listaTarefa" >
+                
+                                <a href="/home" mat-list-item>
+                                        <span mat-line>{{tarefa}}</span>
+                                </a>
+
+                                <mat-divider></mat-divider>
+
+                        </mat-nav-list>
+                </div>
+        </div>
+        <div id="tudo2" class="filter-border">
+                <div>
+                
+                        <button mat-button [matMenuTriggerFor]="menu">
+                                        Criado
+                                <mat-icon>keyboard_arrow_down</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                                <button mat-menu-item>Atribuído por</button>
+                                <button mat-menu-item>Data prevista</button>
+                                <button mat-menu-item>Data do acompanhamento</button>
+                                <button mat-menu-item>Nome da tarefa</button>
+                                <button mat-menu-item>Prioridade</button>
+                                <mat-divider></mat-divider>
+                                <button mat-menu-item>Variável de Execução de Caso</button>
+                                <button mat-menu-item>Variável de Instância de Caso</button>
+                                <button mat-menu-item>Variável de Execução</button>
+                                <button mat-menu-item>Variável de Processo</button>
+                                <button mat-menu-item>Variável de Tarefa</button>
+                        </mat-menu>
+
+
+                        <button mat-button>
+                                <mat-icon>add</mat-icon>
+                        </button>
+                        
+                        <button mat-button class="button-slider">
+                                <mat-icon>keyboard_arrow_left</mat-icon>
+                        </button>
+             
+                        <mat-divider></mat-divider>
+                </div>
+
+                <div>
+                        
+                        <div>
+                
+                                <mat-form-field style="margin-left: 10px;">
+                                        <input  matInput placeholder="Filtar Tarefas">
+                                </mat-form-field>
+
+                                <button mat-button class="button-slider">
+                                        <mat-icon>save</mat-icon>
+                                </button>
+
+                                <button mat-button class="button-slider">
+                                        <mat-icon>link</mat-icon>
+                                </button>
+
+                               <button mat-button class="button-slider">
+                                        1
+                                </button> 
+                                
+                        </div>
+
+                        <mat-divider></mat-divider>
+                        <mat-list role="list">
+                                        <mat-nav-list>
+                                                <a href="/home" mat-list-item>
+                                                        <span mat-line>Tipificar e digitar documentos manualmente</span>
+                                                        <span mat-line>Tratamento por Documento Administrador Admin</span>
+                                                        <span mat-line>Criado 5 dias agora	50</span>
+                                                        <mat-divider></mat-divider>
+                                                        
+                                                </a>
+                                        </mat-nav-list>
+                        </mat-list>
+                </div>
+
+        </div>
+        <div id="tudo3" class="filter-border">
+                <div>
+                        <button mat-button (click)="onClick">
+                                <mat-icon class="mat-10">keyboard_arrow_right</mat-icon>
+                        </button>
+                        
+                        <button mat-button class="button-slider">
+                                <mat-icon>fullscreen</mat-icon>
+                        </button>
+
+                        <mat-divider></mat-divider>
+                </div>
+
+                <div>
+                        <mat-card><h2>Tipificar e digitar documentos manualmente</h2></mat-card>
+                        <mat-card>Tratamento por Documento</mat-card>
+
+                        <div>
+                                
+                                <button mat-button *ngIf="viewDataAcompanhamento" >
+                                        <mat-icon>date_range</mat-icon>
+                                        Definir data de acompanhamento
+                                </button>
+
+                                <mat-form-field *ngIf="!viewDataAcompanhamento">
+                                        <input matInput [matDatepicker]="picker" placeholder="Data acompanhamento">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+
+                                <button mat-button *ngIf="viewDataPrevisao">
+                                        <mat-icon>notification_important</mat-icon>
+                                        Definir data de previsão
+                                </button>
+
+                                <mat-form-field *ngIf="!viewDataPrevisao">
+                                        <input matInput [matDatepicker]="picker2" placeholder="Definir data de previsão">
+                                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker2></mat-datepicker>
+                                </mat-form-field>
+                        
+                                <button mat-button class="button-slider">
+                                        <mat-icon>perm_identity</mat-icon>
+                                        Administrador Admin
+                                </button>
+
+                                <button mat-button class="button-slider">
+                                        <mat-icon>view_module</mat-icon>
+                                        Digitação - Porto Segiro
+                                </button>
+
+                        </div>
+
+                        <div>
+                                <mat-tab-group>
+                                        <mat-tab label="Formuário">Formuário</mat-tab>
+                                        <mat-tab label="Histórico">Histórico</mat-tab>
+                                        <mat-tab label="Diagrama">Diagrama</mat-tab>
+                                        <mat-tab label="Descrição">Descrição</mat-tab>
+                                </mat-tab-group>
+                        </div>
+                
+                
+                </div>
+        </div>
+</div>

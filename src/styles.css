@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import "../node_modules/bootstrap/dist/css/bootstrap.css"; */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+    margin: 0px;
+    /* background: linear-gradient(to right, rgb(238, 245, 239) , rgb(224, 248, 235)); */
+}
+
+.template-hearder{
+    padding: 0px 0px 0px 0px;
+    background-color: white;
+    /* background: linear-gradient(to right, rgb(46, 175, 68) , rgb(149, 231, 128)); */
+    height: 45px;
+}
+
+.logo-principal{ 
+    margin-top: 2px;
+    float: left;
+    height: 40px;
+    width: 90px;
+}
+
+.body-contet{
+    font-family: sans-serif;
+    padding: 8px 8px 8px 8px;
+}
+
+.form-cadastro{
+    margin-left: 10%;
+}
+
+.componet-menu-principal{
+    float: right;
+}
+
+.space-header{
+    background-color: green;
+    height: 2px;
+}
+
+.button-menu{
+    font-family: sans-serif;
+    height: 44px;
+}
+
+.icon-button-menu{
+    margin-bottom: 8px;
+}
+
+ .example-header-image {
+    background-size: cover;
+  }
+
+  .div-total-size{
+      width: 100%;
+  }
+
+  .div-float-right{
+    float: right;
+  }
+
+  .div-float-left{
+      float: left;
+  }
+
+
+
